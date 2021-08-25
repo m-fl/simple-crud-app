@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) =>  ({
     root: {
         flexGrow: 1
     },
-    flexButton: {
-        justifyContent: "flex-end"
+    spacer: {
+        flexGrow: 1
     }
 }));
 
@@ -25,6 +25,7 @@ function Nav(){
                     <Toolbar>
                         <Button>Home</Button>
                         <Button>About</Button>
+                        <div className= {classes.spacer}></div>
                         <Button >Login</Button>
                     </Toolbar>
                 </AppBar>
