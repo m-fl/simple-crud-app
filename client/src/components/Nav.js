@@ -19,19 +19,25 @@ const useStyles = makeStyles((theme) =>  ({
 
 function Nav(){
     const classes = useStyles();
+
+    const linkStyle = {
+        textDecoration: "none",
+        color: "black"
+    };
+
     return (
         <div className = {classes.root}>
             <ThemeProvider theme = {mainTheme}>
                 <AppBar position="static" color="primary">
                     <Toolbar>
-                        <Link to='/'>
+                        <Link to='/' style={linkStyle}>
                             <Button>Home</Button>
                         </Link>
-                        <Link to='/about'>
+                        <Link to='/about' style={linkStyle}>
                             <Button>About</Button>
                         </Link>
                         <div className= {classes.spacer}></div>
-                        <Link to='Login'>
+                        <Link to='Login' style={linkStyle}>
                             <Button >Login</Button>
                         </Link>
                     </Toolbar>
