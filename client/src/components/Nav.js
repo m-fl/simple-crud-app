@@ -2,6 +2,7 @@ import React from 'react';
 import {AppBar, ThemeProvider, Toolbar, Button} from '@material-ui/core';
 import {theme} from './Theme';
 import { makeStyles } from '@material-ui/core';
+import {Link} from 'react-router-dom';
 
 const mainTheme = theme;
 
@@ -23,10 +24,16 @@ function Nav(){
             <ThemeProvider theme = {mainTheme}>
                 <AppBar position="static" color="primary">
                     <Toolbar>
-                        <Button>Home</Button>
-                        <Button>About</Button>
+                        <Link to='/'>
+                            <Button>Home</Button>
+                        </Link>
+                        <Link to='/about'>
+                            <Button>About</Button>
+                        </Link>
                         <div className= {classes.spacer}></div>
-                        <Button >Login</Button>
+                        <Link to='Login'>
+                            <Button >Login</Button>
+                        </Link>
                     </Toolbar>
                 </AppBar>
             </ThemeProvider>
