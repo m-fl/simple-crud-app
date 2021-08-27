@@ -7,12 +7,12 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 2,
     position: 'fixed',
     bottom: '2vh',
-    backgroundColor: '#DCDCDC',
-    color: 'black',
+    backgroundColor: '#ffab40',
+    color: '#9b5f00',
     "&:hover, &.Muy-focusVisible": {
       transition: '0.3s',
-      color: '#397BA6',
-      backgroundColor: '#DCDCDC'
+      color: '#c77c02',
+      backgroundColor: '#da9a50'
     },
     right: '5%',
   }

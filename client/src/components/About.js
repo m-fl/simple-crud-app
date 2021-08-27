@@ -6,7 +6,7 @@ function About(){
     return (
         <div>
             <h1>About Page</h1>
-            <Scroll showBelow={250}/>
+            <Scroll showBelow={10}/>
         </div>
     );
 }
