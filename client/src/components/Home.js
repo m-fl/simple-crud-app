@@ -1,4 +1,5 @@
 import React from 'react';
+import Scroll from './BackToTop';
 import '../App.css';
 
 function Home(){
@@ -25,7 +26,7 @@ Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculu
 Sed urna odio, bibendum eu porttitor non, accumsan a mauris. Suspendisse at erat porttitor, volutpat nunc ut, rhoncus quam. Aliquam sit amet lacus eu ipsum finibus luctus quis sed nibh. Nam nulla tellus, dapibus in ultrices efficitur, elementum eu risus. Etiam fermentum odio quis ligula posuere, a porta nibh luctus. Quisque et ex nec justo interdum ullamcorper. Donec convallis, urna et rutrum finibus, nulla leo eleifend magna, sed convallis tortor leo eu tortor. Morbi commodo sollicitudin mauris, ornare suscipit libero tristique ut. Aenean nec velit sed turpis hendrerit varius. Donec tempor mollis tempus. Nam id purus condimentum, eleifend sem eget, commodo sem. Quisque posuere pretium nulla et sagittis. Vestibulum commodo, ipsum et condimentum bibendum, urna orci sagittis neque, consectetur congue augue odio eget leo. Integer turpis nibh, interdum quis sodales eget, ultricies eget nibh. Cras blandit interdum tristique.
 Nulla in libero massa. Morbi bibendum ullamcorper magna. Maecenas sit amet velit nibh. Donec mi lectus, aliquam ac mauris a, venenatis dapibus turpis. Etiam blandit faucibus scelerisque. In vel sapien ex. Maecenas in tempor neque. Sed condimentum sapien ut ligula fringilla finibus. Aenean ultrices turpis sit amet neque finibus mattis.
 Curabitur eu dignissim ipsum. Nunc eleifend orci sit amet ante pulvinar, ultricies congue lorem hendrerit. Nam velit lorem, accumsan non est id, mollis commodo metus. Donec consequat leo et ligula bibendum luctus. Sed lacus lorem, maximus vel consequat eget, placerat quis erat. Sed ut laoreet justo. Duis sit amet vestibulum lacus. Sed finibus felis sit amet purus malesuada, vel eleifend urna venenatis. Phasellus eleifend scelerisque urna sit amet interdum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec semper aliquet mauris, at vestibulum justo dapibus sed.</p>
-           
+                <Scroll showBelow={10}/>
             </div>
     );
 }

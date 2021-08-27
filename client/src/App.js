@@ -4,14 +4,16 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import About from './components/About';
 import Login from './components/Login';
+import Scroll from './components/BackToTop'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
+
 
 
 const App = () => {
     return (
         <Router>
-            <div>
+            <div style={{backgroundColor:'#f8deb7'}}>
                 <Nav />
                 <Switch>
                     <Route path="/" exact component={Home}/>
