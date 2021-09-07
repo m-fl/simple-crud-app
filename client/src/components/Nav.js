@@ -4,6 +4,7 @@ import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import { theme } from './Theme';
 import { makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const mainTheme = theme;
 
@@ -25,6 +26,11 @@ function Nav(props){
         color: "black"
     };
 
+    var loginName = '';
+    const { isAuthenticated } = useAuth0();
+    if (isAuthenticated === false) loginName = 'Login'; //this is laggy probably because it loads the page first then verifys authentication
+    else loginName = "Profile";
+
     return (
         <div className = {classes.root}>
             <ThemeProvider theme = {mainTheme}>
@@ -38,7 +44,8 @@ function Nav(props){
                         </Link>
                         <div className= {classes.spacer}></div>
                         <Link to='Login' style={linkStyle}>
-                            <Button >Login</Button>
+                            <Button >{loginName}</Button>
+                            
                         </Link>
                     </Toolbar>
                 </AppBar>

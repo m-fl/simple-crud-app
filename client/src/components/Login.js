@@ -7,10 +7,9 @@ import Profile from './Profile';
 function Login(){
     return (
         <div>
-            <h1>Login Page</h1>
             <LoginButton/>
-            <LogoutButton/>
             <Profile/>
+            <LogoutButton/>
         </div>
     );
 }
