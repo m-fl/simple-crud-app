@@ -13,7 +13,7 @@ import './App.css';
 const App = () => {
     return (
         <Router>
-            <div style={{backgroundColor:'#f8deb7'}}>
+            <div>
                 <Nav />
                 <Switch>
                     <Route path="/" exact component={Home}/>
