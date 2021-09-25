@@ -5,7 +5,7 @@ const Profile = () => {
     const {user,isAuthenticated} = useAuth0();
     return (
         isAuthenticated && (
-            <div>
+            <div style={{padding: "100px"}}>
                 <img src={user.picture} alt = {user.name}/>
                 <h2>Welcome, {user.name}</h2>
                 <h3>Email: {user.email}</h3>
