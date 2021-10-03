@@ -12,7 +12,7 @@ const Counter = () => {
     }
 
     function postToScoreData(){
-        Axios.post("http://localhost:3001/insert", {username: user.name, counter: count});
+        Axios.post("http://localhost:3001/insert", {username: user.sub, counter: count + 1});
     }
 
     return (
