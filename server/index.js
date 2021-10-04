@@ -31,6 +31,16 @@ app.post("/insert", async (req, res) =>{
         console.log(err)
     }
 }) 
+
+app.get("/read", async (req, res) =>{
+    Scores.find({}, (err, result)  => {
+        if (err){
+            res.send(err)
+        }
+        res.send(result)
+    })
+})
+
 //test nodemon
 
 app.listen(3001, () => {

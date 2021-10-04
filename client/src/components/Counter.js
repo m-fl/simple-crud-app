@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Axios from 'axios'
 import { useAuth0 } from '@auth0/auth0-react';
 import { Button } from '@material-ui/core'
@@ -6,9 +6,16 @@ import { Button } from '@material-ui/core'
 const Counter = () => {
     const [count, setCount] = useState(0)
     const {user} = new useAuth0();
+    const [scoreList, setScoreList] = useState([])
+
+    useEffect(() => {
+        Axios.get("http://localhost:3001/read").then((response) =>{
+            setScoreList(response.data)
+        })
+    })
 
     function handleClick(){
-        setCount(count + 1)
+        setCount(count + 1);
     }
 
     function postToScoreData(){
@@ -23,7 +30,11 @@ const Counter = () => {
                 }}>
                     Click Me To Increase Score
                 </Button>
-                <div style= {{margin: "10px"}} className = "counter">Score: {count}</div>
+                <div style= {{margin: "10px"}} className = "counter"> {user.name}'s Score: {count}</div>
+                <h1>Data</h1>
+                {scoreList.map((val, key) => {
+                    return <div><h1>username: {val.username} scores: {val.counter}</h1> </div>
+                })}
         </div>
     )
 }
