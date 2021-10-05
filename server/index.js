@@ -41,6 +41,21 @@ app.get("/read", async (req, res) =>{
     })
 })
 
+app.put("/update", async (req, res) => {
+    const updateCount = req.body.updateCount;
+    const id = req.body.id;
+
+    try {
+        await Scores.findById(id, (err, updatedCount) =>{
+            updatedCount.counter = updateCount;
+            updatedCount.save();
+            res.send("update")
+        });
+    }catch(err){
+        console.log(err);
+    }
+})
+
 //test nodemon
 
 app.listen(3001, () => {
