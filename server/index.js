@@ -41,6 +41,18 @@ app.get("/read", async (req, res) =>{
     })
 })
 
+app.get("/readById", async (req, res) =>{
+    Scores.find({}, (err, result)  => {
+        const id = req.body.id
+        const readCount = req.body.readCount
+        if (err){
+            res.send(err)
+        }
+        res.send(result)
+    })
+})
+
+
 app.put("/update", async (req, res) => {
     const updateCount = req.body.updateCount;
     const id = req.body.id;

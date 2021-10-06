@@ -6,3 +6,7 @@ h1,p{
 #game-component{
     align-content: center;
 }
+
+#button{
+    text-align: center;
+}

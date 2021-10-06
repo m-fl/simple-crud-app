@@ -10,7 +10,7 @@ const Game = () => {
         return (
             <div id="game-component">
                 <Counter />
-                <p style={{padding: "20px 600px 20px 600px"}}>This is my basic idea of how this website would work. Have a web based game that has been compiled in html5 displayed in this component while the api sends data to the database such as leaderboard information which can then be viewed in the Leaderboard tab by all users.</p> 
+                <p style={{padding: "20px 10% 20px 10%"}}>This is my basic idea of how this website would work. Have a web based game that has been compiled in html5 displayed in this component while the api sends data to the database such as leaderboard information which can then be viewed in the Leaderboard tab by all users.</p> 
             </div>
         )
     }
