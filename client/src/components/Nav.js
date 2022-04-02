@@ -70,6 +70,9 @@ function Nav(props){
                             <Link to='/leaderboard' style={linkStyle}>
                                 <Button>Leaderboard</Button>
                             </Link>
+                            <Link to='/price_comparer' style={linkStyle}>
+                                <Button>Price Comparer</Button>
+                            </Link>
                             <div className= {classes.spacer}></div>
                             <Link to='/login' style={linkStyle}>
                                 <Button>Profile</Button>

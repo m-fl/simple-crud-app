@@ -4,7 +4,9 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import { connectionURL } from './key.js';
 import { Scores } from './models/Scores.js';
-
+import { Prices } from './models/Prices.js';
+//TODO: https://stackoverflow.com/questions/61466663/mongodb-query-multiple-models 
+//brain too tired to comprehend this
 const app = express();
 
 app.use(express.json());
@@ -23,8 +25,11 @@ app.post("/insert", async (req, res) =>{
     const username = req.body.username;
     const counter = req.body.counter;
     const scoresModel = new Scores({username:username, counter:counter})
-
+    const item = req.body.item;
+    const price = req.body.price;
+    const priceModel = new Prices({username:username, item:item, price:price})
     try{
+        await priceModel.save()
         await scoresModel.save();
         res.send("inserted data")
     } catch(err){

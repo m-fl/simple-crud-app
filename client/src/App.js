@@ -6,6 +6,7 @@ import About from './components/About';
 import Game from './components/Game';
 import Login from './components/Login';
 import Scroll from './components/BackToTop'
+import Price_Comparer from './components/Price_Comparer';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import Leaderboard from './components/Leaderboard';
@@ -21,6 +22,7 @@ const App = () => {
                     <Route path="/" exact component={Home}/>
                     <Route path="/about" component={About}/>
                     <Route path="/game" component={Game}/>
+                    <Route path="/price_comparer" component={Price_Comparer}/>
                     <Route path="/leaderboard" component={Leaderboard}/>
                     <Route path="/login" component={Login}/>
                 </Switch>

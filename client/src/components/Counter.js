@@ -24,11 +24,11 @@ const Counter = () => {
     }
 
     function postToScoreData(){
-        Axios.post("http://localhost:3001/insert", {username: user.sub, counter: count + 1});
+        Axios.post("http://localhost:3001/insert", {username: user.sub, counter: count + 1}); //copy paste this to price comparer with correct params
     }
 
     const updateScore = () => {
-        Axios.put("http://localhost:3001/update", {id: "615be54f078c8823389a967f", updateCount: count})
+        Axios.put("http://localhost:3001/update", {id: "615be54f078c8823389a967f", updateCount: count}) //TODO:maybe fetch id then store in var instead of static placement so we can easily put different users
     }
 
     function mapScoreList(){
